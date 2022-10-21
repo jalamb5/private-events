@@ -2,7 +2,7 @@
 <p>Find me in app/views/users/show.html.erb</p>
 
 <% @user.events.each do |event| %>
-  <%= event.title %>
+  <%= link_to event.title, event_path(event.id) %>
   <%= event.description %>
   <%= event.event_date %>
 <% end %>
